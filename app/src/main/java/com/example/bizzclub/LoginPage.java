@@ -4,8 +4,11 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,9 +17,10 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class LoginPage extends AppCompatActivity {
-    ImageView imageViewGoogle;
-    ImageView imageViewFacebook;
-    ImageView imageViewinkedIn;
+    ImageView imageViewFacebook,imageViewinkedIn,imageViewGoogle;
+    Button loginBtn;
+    DatabaseHelper db;
+    EditText loginEmail,loginPassword;
     TextView newAccount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,10 @@ public class LoginPage extends AppCompatActivity {
         imageViewFacebook=findViewById(R.id.facebook);
         imageViewinkedIn=findViewById(R.id.linkedIn);
         newAccount=findViewById(R.id.newAccount);
+        loginBtn=findViewById(R.id.login);
+        db=new DatabaseHelper(this);
+        loginEmail=findViewById(R.id.loginEmail);
+        loginPassword=findViewById(R.id.loginPassword);
 
         //image linking park
         imageViewGoogle.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +64,19 @@ public class LoginPage extends AppCompatActivity {
                 Intent intent=new Intent(LoginPage.this,Register.class);
                 startActivity(intent);
                 finish();
+            }
+        });
+        loginBtn.setOnClickListener(v-> {
+
+            String email=loginEmail.getText().toString();
+            String pass=loginPassword.getText().toString();
+            if(db.checkUser(email,pass)){
+                Toast.makeText(LoginPage.this,"Login Successful 🥳",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(LoginPage.this,Dashboard.class);
+                startActivity(intent);
+                finish();
+            }else{
+                Toast.makeText(LoginPage.this,"Invalid credentials 🙁",Toast.LENGTH_SHORT).show();
             }
         });
         //view compact part --> put this bottom

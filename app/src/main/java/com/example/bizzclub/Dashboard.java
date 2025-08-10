@@ -40,7 +40,7 @@ public class Dashboard extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
         hamburger = findViewById(R.id.imageView4);
-        news=findViewById(R.id.newsIcon);
+        news=findViewById(R.id.lottieAnimationView);
         hamburger.setOnClickListener(v -> drawerLayout.openDrawer(GravityCompat.START));
 
         navigationView.setNavigationItemSelectedListener(item -> {
