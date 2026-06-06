@@ -79,7 +79,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/yellow"
+                android:background="@color/white"
                 android:orientation="vertical">
 
                 <TextView
@@ -91,7 +91,7 @@
                     android:fontFamily="monospace"
                     android:text="Contact US"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textColor="@color/crimson"
                     android:textSize="30dp"
                     android:textStyle="bold" />
 
@@ -102,23 +102,25 @@
                     android:layout_marginHorizontal="5dp"
                     android:layout_marginTop="20dp"
                     android:textSize="16dp"
+                    android:textAlignment="center"
                     android:text="@string/contact_us"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/background" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_marginTop="20dp"
-                    android:layout_height="150dp"
-                    android:background="@color/yellow"
+                    android:layout_height="160dp"
+                    android:background="@color/white"
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_weight="1"
                         app:cardCornerRadius="20dp"
+                        android:outlineSpotShadowColor="@color/background"
                         app:cardElevation="5dp"
                         android:layout_marginHorizontal="20dp"
-                        android:layout_height="match_parent" >
+                        android:layout_height="150dp" >
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -149,9 +151,10 @@
                         android:layout_width="match_parent"
                         app:cardElevation="5dp"
                         android:layout_weight="1"
+                        android:outlineSpotShadowColor="@color/background"
                         app:cardCornerRadius="20dp"
                         android:layout_marginHorizontal="20dp"
-                        android:layout_height="match_parent" >
+                        android:layout_height="150dp" >
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -182,11 +185,12 @@
                     android:id="@+id/textView17"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginHorizontal="10dp"
                     android:layout_marginTop="20dp"
+                    android:textAlignment="center"
                     android:text="Contact us in social media "
                     android:textSize="16dp"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/background" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -198,6 +202,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/facebook"
                         app:cardElevation="5dp"
+                        android:outlineSpotShadowColor="@color/background"
                         android:layout_width="match_parent"
                         app:cardCornerRadius="20dp"
                         android:layout_height="80dp" >
@@ -231,6 +236,8 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/intergram"
                         app:cardElevation="5dp"
+                        android:outlineSpotShadowColor="@color/background"
+
                         android:layout_width="match_parent"
                         android:layout_marginTop="20dp"
                         app:cardCornerRadius="20dp"
@@ -265,6 +272,8 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/whatsapp"
                         app:cardElevation="5dp"
+                        android:outlineSpotShadowColor="@color/background"
+
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         android:layout_marginTop="20dp"
@@ -299,6 +308,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/telegram"
                         android:layout_width="match_parent"
+                        android:outlineSpotShadowColor="@color/background"
                         android:layout_height="80dp"
                         app:cardElevation="5dp"
                         android:layout_marginTop="20dp"
@@ -338,17 +348,18 @@
                     android:layout_marginHorizontal="5dp"
                     android:layout_marginTop="20dp"
                     android:textSize="16dp"
+                    android:textAlignment="center"
                     android:text="@string/conclution"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/background" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="30dp"
                     android:textAlignment="center"
-                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:textColor="@color/background"
                     android:layout_marginBottom="30dp"
                     android:text="© 2025 BizzClub. All rights reserved"/>
-
             </LinearLayout>
         </ScrollView>
     </androidx.cardview.widget.CardView>
